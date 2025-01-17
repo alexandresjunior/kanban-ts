@@ -1,10 +1,12 @@
 <div class="card">
     <div class="card-header">
-        Tarefa #1
+        {{ codigo }}
     </div>
     <div class="card-body">
-        <h5 class="card-title">Título da Tarefa</h5>
-        <p class="card-text">Breve descrição da tarefa.</p>
-        <a href="#" class="btn btn-primary">Ver detalhes</a>
+        <h5 class="card-title">{{ titulo }}</h5>
+        <p class="mb-0"><small><strong>Data de Criação: </strong>{{ dataCriacao }}</small></p>
+        <p class="mb-0"><small><strong>Criado por: </strong>{{ criadoPor }}</small></p>
+        <p class="mb-0"><small><strong>Atribuído para: </strong>{{ atribuidoPara }}</small></p>
+        <a href="#" class="btn btn-primary mt-3">Ver detalhes</a>
     </div>
 </div>

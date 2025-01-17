@@ -1,1 +1,18 @@
 @import "bootstrap/dist/css/bootstrap.min.css";
+
+.btn-primary {
+    background-color: rgb(0, 15, 110) !important;
+    border-color: rgb(0, 15, 110) !important;
+}
+
+.btn-primary:hover {
+    background-color: rgb(15, 230, 15) !important;
+    border-color: rgb(15, 230, 15) !important;
+    color: rgb(0, 15, 110) !important;
+}
+
+.btn-primary:active {
+    background-color: rgb(142, 142, 142) !important;
+    border-color: rgb(142, 142, 142) !important;
+    color: rgb(255, 255, 255) !important;
+}
