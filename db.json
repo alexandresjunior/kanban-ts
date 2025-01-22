@@ -1,0 +1,20 @@
+{
+  "usuarios": [
+    {
+      "id": "1",
+      "nome": "Alexandre de Souza Jr.",
+      "email": "souzajr.alexandre@gmail.com"
+    },
+    {
+      "id": "2",
+      "nome": "Bryan Nascimento",
+      "email": "bryan.nascimento@gmail.com"
+    },
+    {
+      "id": "4",
+      "nome": "Sérgio Diniz",
+      "email": "sergio.diniz@gmail.com"
+    }
+  ],
+  "tarefas": []
+}
