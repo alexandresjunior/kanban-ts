@@ -1,7 +1,11 @@
 <app-cabecalho></app-cabecalho>
 <div class="container text-center">
   <div class="row">
-    <select class="form-select mb-3" aria-label="Filtrar por tipo de tarefa:">
+    <select
+      class="form-select mb-3"
+      aria-label="Filtrar por tipo de tarefa:"
+      (change)="atualizarTipoSelecionado($event)"
+    >
       <option selected>Todos</option>
       <option value="atendimento">Atendimento</option>
       <option value="correcoes">Correções</option>
@@ -12,7 +16,9 @@
       *ngFor="let status of statuses"
       class="col-lg-3 col-md-3 col-12 border rounded p-2"
     >
-      <p class="h4 mt-2 mb-4">{{ status }} ({{ obterTarefasPorStatus(status).length }})</p>
+      <p class="h4 mt-2 mb-4">
+        {{ status }} ({{ obterTarefasPorStatus(status).length }})
+      </p>
       <div class="row g-3">
         <app-cartao
           *ngFor="let tarefa of obterTarefasPorStatus(status)"

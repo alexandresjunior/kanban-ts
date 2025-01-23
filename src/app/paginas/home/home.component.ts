@@ -14,6 +14,7 @@ import { TarefasService } from '../../services/tarefas.service';
 })
 export class HomeComponent {
   @Input() tarefas: Tarefa[] = [];
+  tipoSelecionado: string = 'Todos';
 
   statuses: string[] = [
     'Registrada',
@@ -34,6 +35,15 @@ export class HomeComponent {
   }
 
   obterTarefasPorStatus(status: string): Tarefa[] {
-    return this.tarefas.filter(tarefa => tarefa.status === status);
+    return this.tarefas.filter(tarefa =>
+      tarefa.status === status &&
+      (this.tipoSelecionado === 'Todos' || tarefa.type === this.tipoSelecionado)
+    );
   }
+
+  atualizarTipoSelecionado(event: Event): void {
+    const selectElement = event.target as HTMLSelectElement;
+    this.tipoSelecionado = selectElement.value;
+  }
+
 }
