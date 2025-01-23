@@ -1,12 +1,12 @@
-<div class="card">
+<div class="card {{ tipo }}">
     <div class="card-header">
-        {{ id }}
+        RM-{{ id }}
     </div>
     <div class="card-body">
-        <h5 class="card-title">{{ titulo }}</h5>
+        <strong class="card-title">{{ titulo }}</strong>
         <p class="mb-0"><small><strong>Data de Criação: </strong>{{ dataCriacao }}</small></p>
         <p class="mb-0"><small><strong>Criado por: </strong>{{ autor }}</small></p>
         <p class="mb-0"><small><strong>Atribuído para: </strong>{{ responsavel }}</small></p>
-        <a href="#" class="btn btn-primary mt-3">Ver detalhes</a>
+        <a href="http://redmine.compesa.com.br/issues/{{ id }}" class="btn btn-primary mt-3" target="_blank">Ver detalhes</a>
     </div>
 </div>

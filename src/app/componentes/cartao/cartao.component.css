@@ -1,0 +1,15 @@
+.card.atendimento {
+    border-left: 5px solid #007bff;
+}
+
+.card.correcoes {
+    border-left: 5px solid #28a745;
+}
+
+.card.evolucoes {
+    border-left: 5px solid #ffc107;
+}
+
+.card.desenvolvimento {
+    border-left: 5px solid #dc3545;
+}

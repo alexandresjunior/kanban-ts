@@ -1,11 +1,18 @@
 <app-cabecalho></app-cabecalho>
 <div class="container text-center">
   <div class="row">
+    <select class="form-select mb-3" aria-label="Filtrar por tipo de tarefa:">
+      <option selected>Todos</option>
+      <option value="atendimento">Atendimento</option>
+      <option value="correcoes">Correções</option>
+      <option value="evolucoes">Evoluções e Novos Projetos</option>
+      <option value="desenvolvimento">Desenvolvimento</option>
+    </select>
     <div
       *ngFor="let status of statuses"
       class="col-lg-3 col-md-3 col-12 border rounded p-2"
     >
-      <p class="h4 mt-2 mb-4">{{ status }}</p>
+      <p class="h4 mt-2 mb-4">{{ status }} ({{ obterTarefasPorStatus(status).length }})</p>
       <div class="row g-3">
         <app-cartao
           *ngFor="let tarefa of obterTarefasPorStatus(status)"
@@ -13,10 +20,11 @@
           [titulo]="tarefa.title"
           [dataCriacao]="tarefa.created_on"
           [autor]="tarefa.author"
+          [tipo]="tarefa.type"
         >
         </app-cartao>
       </div>
     </div>
   </div>
-  <app-rodape></app-rodape>
 </div>
+<app-rodape></app-rodape>
