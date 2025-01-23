@@ -1,24 +1,77 @@
 <div class="container-fluid container-cabecalho px-5">
-    <header class="d-flex flex-wrap justify-content-center py-3 mb-4">
-        <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
-            <img src="assets/imagens/trello_logo.webp" alt="Trello" width="100">
-        </a>
+  <header class="d-flex flex-wrap justify-content-center py-3 mb-4">
+    <a
+      href="/"
+      class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none"
+    >
+      <img src="assets/imagens/trello_logo.webp" alt="Trello" width="100" />
+    </a>
 
-        <ul class="nav nav-pills">
-            <li class="nav-item"><a href="#" class="nav-link active" aria-current="page">Projeto #1</a></li>
-            <li class="nav-item"><a href="#" class="nav-link">Projeto #2</a></li>
-            <li class="nav-item"><a href="#" class="nav-link">Projeto #3</a></li>
-            <li class="nav-item"><a href="#" class="nav-link">Projeto #4</a></li>
-            <li class="nav-item me-2">
-                <button type="button" class="btn btn-light">
-                    <fa-icon [icon]="faPlus" class="fa-icon"></fa-icon>
-                </button>
-            </li>
-            <li class="nav-item">
-                <button type="button" class="btn btn-light" (click)="fazerLogout()">
-                    <fa-icon [icon]="faSignOut" class="fa-icon"></fa-icon>
-                </button>
-            </li>
-        </ul>
-    </header>
+    <div class="dropdown me-2">
+      <button
+        class="btn btn-light dropdown-toggle"
+        type="button"
+        id="dropdownMenuButton"
+        data-bs-toggle="dropdown"
+        aria-expanded="false"
+      >
+        Filtrar por tipo de tarefa
+      </button>
+      <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+        <li>
+          <a
+            class="dropdown-item"
+            role="button"
+            (click)="atualizarTipoSelecionado('Todos')"
+            >Todos</a
+          >
+        </li>
+        <li>
+          <a
+            class="dropdown-item"
+            role="button"
+            (click)="atualizarTipoSelecionado('atendimento')"
+            >Atendimento</a
+          >
+        </li>
+        <li>
+          <a
+            class="dropdown-item"
+            role="button"
+            (click)="atualizarTipoSelecionado('correcoes')"
+            >Correções</a
+          >
+        </li>
+        <li>
+          <a
+            class="dropdown-item"
+            role="button"
+            (click)="atualizarTipoSelecionado('evolucoes')"
+            >Evoluções e Novos Projetos</a
+          >
+        </li>
+        <li>
+          <a
+            class="dropdown-item"
+            role="button"
+            (click)="atualizarTipoSelecionado('desenvolvimento')"
+            >Desenvolvimento</a
+          >
+        </li>
+      </ul>
+    </div>
+
+    <ul class="nav nav-pills">
+      <li class="nav-item me-2">
+        <button type="button" class="btn btn-light">
+          <fa-icon [icon]="faPlus" class="fa-icon"></fa-icon>
+        </button>
+      </li>
+      <li class="nav-item">
+        <button type="button" class="btn btn-light" (click)="fazerLogout()">
+          <fa-icon [icon]="faSignOut" class="fa-icon"></fa-icon>
+        </button>
+      </li>
+    </ul>
+  </header>
 </div>

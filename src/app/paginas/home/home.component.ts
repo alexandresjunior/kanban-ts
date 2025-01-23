@@ -41,9 +41,8 @@ export class HomeComponent {
     );
   }
 
-  atualizarTipoSelecionado(event: Event): void {
-    const selectElement = event.target as HTMLSelectElement;
-    this.tipoSelecionado = selectElement.value;
+  atualizarTipoSelecionado(novoTipo: string): void {
+    this.tipoSelecionado = novoTipo;
   }
 
 }

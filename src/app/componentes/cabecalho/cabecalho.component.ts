@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { Router } from '@angular/router';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { faPlus, faSignOut } from '@fortawesome/free-solid-svg-icons';
@@ -12,11 +12,17 @@ import { faPlus, faSignOut } from '@fortawesome/free-solid-svg-icons';
 export class CabecalhoComponent {
   faPlus = faPlus;
   faSignOut = faSignOut;
-  router: Router = new Router;
+  @Output() tipoSelecionado = new EventEmitter<string>();
+
+  constructor(private router: Router) {}
 
   fazerLogout() : void {
     localStorage.removeItem('usuario_kanban');
     sessionStorage.removeItem('usuario_kanban');
     this.router.navigate(['']);
+  }
+
+  atualizarTipoSelecionado(tipo: string): void {
+    this.tipoSelecionado.emit(tipo);
   }
 }
