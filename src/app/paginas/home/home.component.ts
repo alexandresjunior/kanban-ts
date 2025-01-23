@@ -15,6 +15,7 @@ import { TarefasService } from '../../services/tarefas.service';
 export class HomeComponent {
   @Input() tarefas: Tarefa[] = [];
   tipoSelecionado: string = 'Todos';
+  usuarioSelecionado: string = 'Todos';
 
   statuses: string[] = [
     'Registrada',
@@ -34,11 +35,18 @@ export class HomeComponent {
     });
   }
 
-  obterTarefasPorStatus(status: string): Tarefa[] {
-    return this.tarefas.filter(tarefa =>
-      tarefa.status === status &&
-      (this.tipoSelecionado === 'Todos' || tarefa.type === this.tipoSelecionado)
-    );
+  filtrarTarefas(status: string): Tarefa[] {
+    return this.tarefas.filter(tarefa => {
+      const filtroStatus = tarefa.status === status;
+      const filtroUsuario = this.usuarioSelecionado === 'Todos' || tarefa.assigned_to === this.usuarioSelecionado;
+      const filtroTipo = this.tipoSelecionado === 'Todos' || tarefa.type === this.tipoSelecionado;
+
+      return filtroStatus && filtroUsuario && filtroTipo;
+    });
+  }
+
+  atualizarUsuarioSelecionado(novoUsuario: string): void {
+    this.usuarioSelecionado = novoUsuario;
   }
 
   atualizarTipoSelecionado(novoTipo: string): void {

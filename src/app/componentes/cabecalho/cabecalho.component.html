@@ -3,7 +3,8 @@
     class="d-flex flex-wrap justify-content-center align-items-center py-3 mb-4"
   >
     <a
-      href="http://redmine.compesa.com.br/" target="_blank"
+      href="http://redmine.compesa.com.br/"
+      target="_blank"
       class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none"
     >
       <img
@@ -12,6 +13,32 @@
         width="200"
       />
     </a>
+
+    <div class="dropdown me-2">
+      <button
+        class="btn btn-light dropdown-toggle"
+        type="button"
+        id="dropdownMenuButton"
+        data-bs-toggle="dropdown"
+        aria-expanded="false"
+      >
+        Filtrar por usuário
+      </button>
+      <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+        <li>
+          <a class="dropdown-item" role="button">Todos</a>
+        </li>
+        <li *ngFor="let usuario of usuarios">
+          <a
+            class="dropdown-item"
+            role="button"
+            (click)="atualizarUsuarioSelecionado(usuario)"
+          >
+            {{ usuario }}
+          </a>
+        </li>
+      </ul>
+    </div>
 
     <div class="dropdown me-2">
       <button

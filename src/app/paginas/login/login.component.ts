@@ -21,7 +21,6 @@ export class LoginComponent {
 
   fazerLogin(): void {
     // Chamada a API de autenticação
-    console.log(this.usuario);
 
     if (this.usuario.manterConectado) {
       localStorage.setItem('usuario_kanban', JSON.stringify(this.usuario));
