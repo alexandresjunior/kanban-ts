@@ -6,7 +6,15 @@
 
 .kanban-column {
     overflow-y: auto;
-    max-height: calc(100vh - 50px);  /* Altura máxima da área de cartões */
-    min-height: calc(100vh - 50px);  /* Altura máxima da área de cartões */
+    max-height: calc(100vh - 50px);
+    /* Altura máxima da área de cartões */
+    min-height: calc(100vh - 50px);
+    /* Altura máxima da área de cartões */
     transform: rotateX(180deg);
+}
+
+.kanban-column-title {
+    color: rgb(0, 15, 110);
+    font-weight: 600;
+    font-size: 18px;
 }

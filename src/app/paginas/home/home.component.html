@@ -1,4 +1,6 @@
-<app-cabecalho (tipoSelecionado)="atualizarTipoSelecionado($event)"></app-cabecalho>
+<app-cabecalho
+  (tipoSelecionado)="atualizarTipoSelecionado($event)"
+></app-cabecalho>
 <div class="container-fluid text-center">
   <div class="row px-5">
     <div class="kanban-board">
@@ -6,7 +8,7 @@
         *ngFor="let status of statuses"
         class="col-lg-2 col-md-2 col-12 border rounded p-2 mx-2 my-3 kanban-column"
       >
-        <p class="h5 mt-2 mb-4">
+        <p class="kanban-column-title mt-2 mb-4">
           {{ status }} ({{ obterTarefasPorStatus(status).length }})
         </p>
         <div class="row g-3">

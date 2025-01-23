@@ -1,12 +1,17 @@
-<div class="card {{ tipo }}">
-    <div class="card-header">
-        RM-{{ id }}
-    </div>
-    <div class="card-body">
-        <strong class="card-title">{{ titulo }}</strong>
-        <p class="mb-0"><small><strong>Data de Criação: </strong>{{ dataCriacao }}</small></p>
-        <p class="mb-0"><small><strong>Criado por: </strong>{{ autor }}</small></p>
-        <p class="mb-0"><small><strong>Atribuído para: </strong>{{ responsavel }}</small></p>
-        <a href="http://redmine.compesa.com.br/issues/{{ id }}" class="btn btn-primary mt-3" target="_blank">Ver detalhes</a>
-    </div>
+<div class="kanban-card {{ tipo }} text-start">
+  <a href="http://redmine.compesa.com.br/issues/{{ id }}" target="_blank">
+    <p class="mb-0">
+      <small>RM-{{ id }}</small>
+    </p>
+    <strong class="card-title">{{ titulo }}</strong>
+    <p class="mb-0">
+      <small><strong>Data de Criação: </strong>{{ dataCriacao }}</small>
+    </p>
+    <p class="mb-0">
+      <small><strong>Criado por: </strong>{{ autor }}</small>
+    </p>
+    <p class="mb-0">
+      <small><strong>Atribuído para: </strong>{{ responsavel }}</small>
+    </p>
+  </a>
 </div>
