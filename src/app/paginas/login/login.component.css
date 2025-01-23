@@ -5,3 +5,21 @@
     align-items: center;
     min-height: 100vh;
 }
+
+.form-check-input {
+    border-color: #9c0000;
+}
+
+.form-check-input:checked {
+    background-color: #9c0000;
+    border-color: #9c0000;
+}
+
+.form-check-input:focus {
+    box-shadow: 0 0 0 0.25rem rgba(156, 0, 0, 0.25);
+}
+
+.form-control:focus {
+    box-shadow: 0 0 0 0.25rem rgba(156, 0, 0, 0.25);
+    border-color: #9c0000;
+}

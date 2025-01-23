@@ -1,5 +1,5 @@
 .container-cabecalho {
-    background-color: rgb(0, 15, 110);
+    background-color: #9c0000;
 }
 
 .nav-link {
@@ -7,19 +7,20 @@
 }
 
 .nav-link:hover {
-    color: rgb(15, 230, 15) !important;
+    color: #ce3129 !important;
 }
 
 .active {
-    background-color: rgb(15, 230, 15) !important;
-    color: rgb(0, 15, 110) !important;
+    background-color: #fff !important;
+    color: #9c0000 !important;
+    border: none;
 }
 
 .active:hover {
-    background-color: rgb(0, 130, 0) !important;
+    background-color: #ce3129 !important;
     color: #fff !important;
 }
 
-.fa-icon { 
-    color: rgb(0, 15, 110);
+.fa-icon {
+    color: #9c0000;
 }

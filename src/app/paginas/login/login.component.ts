@@ -9,13 +9,15 @@ import { FormsModule } from '@angular/forms';
   styleUrl: './login.component.css'
 })
 export class LoginComponent {
-  router: Router = new Router;
+  ano: number = new Date().getFullYear();
 
   usuario = {
     email: "",
     senha: "",
     manterConectado: true
   }
+
+  constructor(private router: Router) { }
 
   fazerLogin(): void {
     // Chamada a API de autenticação

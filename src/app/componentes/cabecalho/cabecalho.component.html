@@ -1,10 +1,16 @@
 <div class="container-fluid container-cabecalho px-5">
-  <header class="d-flex flex-wrap justify-content-center py-3 mb-4">
+  <header
+    class="d-flex flex-wrap justify-content-center align-items-center py-3 mb-4"
+  >
     <a
-      href="/"
+      href="http://redmine.compesa.com.br/" target="_blank"
       class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none"
     >
-      <img src="assets/imagens/trello_logo.webp" alt="Trello" width="100" />
+      <img
+        src="assets/imagens/redmine_logo_white.png"
+        alt="Redmine"
+        width="200"
+      />
     </a>
 
     <div class="dropdown me-2">
@@ -57,6 +63,23 @@
             (click)="atualizarTipoSelecionado('desenvolvimento')"
             >Desenvolvimento</a
           >
+        </li>
+      </ul>
+    </div>
+
+    <div class="dropdown me-2">
+      <button
+        class="btn btn-light dropdown-toggle"
+        type="button"
+        id="dropdownMenuButton"
+        data-bs-toggle="dropdown"
+        aria-expanded="false"
+      >
+        Filtrar por projeto
+      </button>
+      <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+        <li>
+          <a class="dropdown-item" role="button">GSAN</a>
         </li>
       </ul>
     </div>
