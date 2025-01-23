@@ -7,10 +7,10 @@ import { Component, Input } from '@angular/core';
   styleUrl: './cartao.component.css'
 })
 export class CartaoComponent {
-  @Input() codigo: string = "";
+  @Input() id: number = 0;
   @Input() titulo: string = "";
-  @Input() descricao: string = "";
   @Input() dataCriacao: string = "";
-  @Input() criadoPor: string = "";
-  @Input() atribuidoPara: string = "";
+  @Input() autor: string = "";
+  @Input() tipo: string = "";
+  @Input() responsavel: string = "";
 }
