@@ -1,80 +1,23 @@
 <app-cabecalho></app-cabecalho>
 <div class="container text-center">
     <div class="row">
-        <div class="col-lg-3 col-md-3 col-12 border rounded p-2">
-            <p class="h4 mt-2 mb-4">Planejando</p>
-            <div class="row g-3">
-                <app-cartao 
-                    [codigo]="'TR-001'"
-                    [titulo]="'Treinamento Angular'"
-                    [dataCriacao]="'16/01/2025'"
-                    [criadoPor]="'Bryan Nascimento'"
-                    [atribuidoPara]="'Cláudio Vinícius'"
-                ></app-cartao>
-                <app-cartao 
-                    [codigo]="'TR-002'"
-                    [titulo]="'Treinamento Java'"
-                    [dataCriacao]="'23/01/2025'"
-                    [criadoPor]="'Bryan Nascimento'"
-                    [atribuidoPara]="'Cláudio Vinícius'"
-                ></app-cartao>
-                <app-cartao 
-                    [codigo]="'TR-003'"
-                    [titulo]="'Treinamento CSS'"
-                    [dataCriacao]="'26/01/2025'"
-                    [criadoPor]="'Leandro Kober'"
-                    [atribuidoPara]="'Sérgio Diniz'"
-                ></app-cartao>
-            </div>
-        </div>
-        <div class="col-lg-3 col-md-3 col-12 border rounded p-2">
-            <p class="h4 mt-2 mb-4">A Fazer</p>
-            <div class="row g-3">
-                <app-cartao 
-                    [codigo]="'TR-004'"
-                    [titulo]="'Treinamento React'"
-                    [dataCriacao]="'16/01/2025'"
-                    [criadoPor]="'Bryan Nascimento'"
-                    [atribuidoPara]="'Cláudio Vinícius'"
-                ></app-cartao>
-                <app-cartao 
-                    [codigo]="'TR-005'"
-                    [titulo]="'Treinamento HTML'"
-                    [dataCriacao]="'16/01/2025'"
-                    [criadoPor]="'Bryan Nascimento'"
-                    [atribuidoPara]="'Cláudio Vinícius'"
-                ></app-cartao>
-            </div>
-        </div>
-        <div class="col-lg-3 col-md-3 col-12 border rounded p-2">
-            <p class="h4 mt-2 mb-4">Fazendo</p>
-            <div class="row g-3">
-                <app-cartao 
-                    [codigo]="'TR-006'"
-                    [titulo]="'Treinamento Python'"
-                    [dataCriacao]="'16/01/2025'"
-                    [criadoPor]="'Bryan Nascimento'"
-                    [atribuidoPara]="'Cláudio Vinícius'"
-                ></app-cartao>
-                <app-cartao 
-                    [codigo]="'TR-007'"
-                    [titulo]="'Treinamento Bootstrap'"
-                    [dataCriacao]="'16/01/2025'"
-                    [criadoPor]="'Bryan Nascimento'"
-                    [atribuidoPara]="'Cláudio Vinícius'"
-                ></app-cartao>
-            </div>
-        </div>
-        <div class="col-lg-3 col-md-3 col-12 border rounded p-2">
-            <p class="h4 mt-2 mb-4">Concluído</p>
-            <div class="row g-3">
-                <app-cartao 
-                    [codigo]="'TR-008'"
-                    [titulo]="'Treinamento TypeScript'"
-                    [dataCriacao]="'16/01/2025'"
-                    [criadoPor]="'Bryan Nascimento'"
-                    [atribuidoPara]="'Cláudio Vinícius'"
-                ></app-cartao>
+        <div class="kanban-board">
+            <div 
+                *ngFor="let status of statuses"
+                class="col-lg-3 col-md-3 col-12 border rounded p-2 mx-2"
+            >
+                <p class="h4 mt-2 mb-4">{{ status }}</p>
+                <div class="row g-3">
+                    <app-cartao 
+                        *ngFor="let tarefa of obterTarefasPorStatus(status)"
+                        [id]="tarefa.id"
+                        [titulo]="tarefa.title"
+                        [dataCriacao]="tarefa.created_on"
+                        [autor]="tarefa.author"
+                        [tipo]="tarefa.type"
+                        [responsavel]="tarefa.assigned_to"
+                    ></app-cartao>
+                </div>
             </div>
         </div>
     </div>

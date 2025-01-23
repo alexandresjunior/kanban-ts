@@ -1,20 +1,274 @@
 {
-  "usuarios": [
+  "tarefas": [
     {
-      "id": "1",
-      "nome": "Alexandre de Souza Jr.",
-      "email": "souzajr.alexandre@gmail.com"
+      "id": 1,
+      "title": "Corrigir erro na autenticação",
+      "created_on": "2025-01-20",
+      "author": "João Silva",
+      "type": "bug",
+      "status": "Em Execução",
+      "assigned_to": "Maria Oliveira"
     },
     {
-      "id": "2",
-      "nome": "Bryan Nascimento",
-      "email": "bryan.nascimento@gmail.com"
+      "id": 2,
+      "title": "Adicionar novo campo no formulário de cadastro",
+      "created_on": "2025-01-21",
+      "author": "Maria Oliveira",
+      "type": "feature",
+      "status": "Pronta para Homologação",
+      "assigned_to": "João Silva"
     },
     {
-      "id": "4",
-      "nome": "Sérgio Diniz",
-      "email": "sergio.diniz@gmail.com"
+      "id": 3,
+      "title": "Atualizar documentação da API",
+      "created_on": "2025-01-22",
+      "author": "Carlos Mendes",
+      "type": "documentation",
+      "status": "Registrada",
+      "assigned_to": "Ana Costa"
+    },
+    {
+      "id": 4,
+      "title": "Implementar autenticação via OAuth",
+      "created_on": "2025-01-23",
+      "author": "Ana Costa",
+      "type": "feature",
+      "status": "Aguardando Versão",
+      "assigned_to": "Pedro Souza"
+    },
+    {
+      "id": 5,
+      "title": "Resolver problemas de performance no endpoint /tarefas",
+      "created_on": "2025-01-23",
+      "author": "Pedro Souza",
+      "type": "optimization",
+      "status": "Análise Viabilidade",
+      "assigned_to": "Clara Lima"
+    },
+    {
+      "id": 6,
+      "title": "Implementar dashboard de relatórios",
+      "created_on": "2025-01-15",
+      "author": "Clara Lima",
+      "type": "evolucoes",
+      "status": "Em Execução",
+      "assigned_to": "Lucas Alves"
+    },
+    {
+      "id": 7,
+      "title": "Corrigir erro no upload de arquivos",
+      "created_on": "2025-01-12",
+      "author": "Lucas Alves",
+      "type": "correcoes",
+      "status": "Reaberta",
+      "assigned_to": "Beatriz Rocha"
+    },
+    {
+      "id": 8,
+      "title": "Adicionar filtro avançado na pesquisa",
+      "created_on": "2025-01-10",
+      "author": "Beatriz Rocha",
+      "type": "desenvolvimento",
+      "status": "Pronta para Homologação",
+      "assigned_to": "Ricardo Martins"
+    },
+    {
+      "id": 9,
+      "title": "Realizar migração de banco de dados",
+      "created_on": "2025-01-18",
+      "author": "Ricardo Martins",
+      "type": "evolucoes",
+      "status": "Aguardando Versão",
+      "assigned_to": "Amanda Ribeiro"
+    },
+    {
+      "id": 10,
+      "title": "Revisar textos no portal de atendimento",
+      "created_on": "2025-01-05",
+      "author": "Amanda Ribeiro",
+      "type": "atendimento",
+      "status": "Registrada",
+      "assigned_to": "Felipe Cardoso"
+    },
+    {
+      "id": 11,
+      "title": "Corrigir erro no cálculo de impostos",
+      "created_on": "2025-01-07",
+      "author": "Felipe Cardoso",
+      "type": "correcoes",
+      "status": "Análise Priorização",
+      "assigned_to": "Juliana Ferreira"
+    },
+    {
+      "id": 12,
+      "title": "Criar integração com API externa",
+      "created_on": "2025-01-09",
+      "author": "Juliana Ferreira",
+      "type": "desenvolvimento",
+      "status": "Em Execução",
+      "assigned_to": "Gustavo Santos"
+    },
+    {
+      "id": 13,
+      "title": "Melhorar layout da página inicial",
+      "created_on": "2025-01-04",
+      "author": "Gustavo Santos",
+      "type": "evolucoes",
+      "status": "Análise Viabilidade",
+      "assigned_to": "Paula Neves"
+    },
+    {
+      "id": 14,
+      "title": "Corrigir erro de validação no formulário",
+      "created_on": "2025-01-03",
+      "author": "Paula Neves",
+      "type": "correcoes",
+      "status": "Pronta para Homologação",
+      "assigned_to": "Fernando Lima"
+    },
+    {
+      "id": 15,
+      "title": "Implementar autenticação multifator",
+      "created_on": "2025-01-02",
+      "author": "Fernando Lima",
+      "type": "desenvolvimento",
+      "status": "Aguardando Versão",
+      "assigned_to": "Daniel Carvalho"
+    },
+    {
+      "id": 16,
+      "title": "Revisar logs de segurança",
+      "created_on": "2025-01-08",
+      "author": "Daniel Carvalho",
+      "type": "atendimento",
+      "status": "Em Execução",
+      "assigned_to": "Renata Souza"
+    },
+    {
+      "id": 17,
+      "title": "Otimizar consulta de relatórios",
+      "created_on": "2025-01-11",
+      "author": "Renata Souza",
+      "type": "evolucoes",
+      "status": "Análise Priorização",
+      "assigned_to": "Thiago Pereira"
+    },
+    {
+      "id": 18,
+      "title": "Corrigir timeout na API de pagamentos",
+      "created_on": "2025-01-14",
+      "author": "Thiago Pereira",
+      "type": "correcoes",
+      "status": "Reaberta",
+      "assigned_to": "Mariana Oliveira"
+    },
+    {
+      "id": 19,
+      "title": "Adicionar notificação de e-mails",
+      "created_on": "2025-01-06",
+      "author": "Mariana Oliveira",
+      "type": "desenvolvimento",
+      "status": "Pronta para Homologação",
+      "assigned_to": "André Costa"
+    },
+    {
+      "id": 20,
+      "title": "Corrigir inconsistência no histórico de pedidos",
+      "created_on": "2025-01-13",
+      "author": "André Costa",
+      "type": "correcoes",
+      "status": "Aguardando Versão",
+      "assigned_to": "Vanessa Lima"
+    },
+    {
+      "id": 21,
+      "title": "Melhorar performance do módulo de vendas",
+      "created_on": "2025-01-16",
+      "author": "Vanessa Lima",
+      "type": "evolucoes",
+      "status": "Em Execução",
+      "assigned_to": "Diego Ramos"
+    },
+    {
+      "id": 22,
+      "title": "Criar exportação de relatórios em Excel",
+      "created_on": "2025-01-19",
+      "author": "Diego Ramos",
+      "type": "desenvolvimento",
+      "status": "Registrada",
+      "assigned_to": "Laura Campos"
+    },
+    {
+      "id": 23,
+      "title": "Atualizar dependências do projeto",
+      "created_on": "2025-01-17",
+      "author": "Laura Campos",
+      "type": "atendimento",
+      "status": "Análise Viabilidade",
+      "assigned_to": "Gabriel Nogueira"
+    },
+    {
+      "id": 24,
+      "title": "Corrigir erro na geração de PDFs",
+      "created_on": "2025-01-09",
+      "author": "Gabriel Nogueira",
+      "type": "correcoes",
+      "status": "Pronta para Homologação",
+      "assigned_to": "Patrícia Dias"
+    },
+    {
+      "id": 25,
+      "title": "Adicionar suporte a múltiplos idiomas",
+      "created_on": "2025-01-15",
+      "author": "Patrícia Dias",
+      "type": "desenvolvimento",
+      "status": "Aguardando Versão",
+      "assigned_to": "Eduardo Silva"
+    },
+    {
+      "id": 26,
+      "title": "Melhorar acessibilidade no portal",
+      "created_on": "2025-01-14",
+      "author": "Eduardo Silva",
+      "type": "evolucoes",
+      "status": "Análise Priorização",
+      "assigned_to": "Sofia Batista"
+    },
+    {
+      "id": 27,
+      "title": "Implementar dashboard de monitoramento",
+      "created_on": "2025-01-11",
+      "author": "Sofia Batista",
+      "type": "desenvolvimento",
+      "status": "Pronta para Homologação",
+      "assigned_to": "Henrique Torres"
+    },
+    {
+      "id": 28,
+      "title": "Revisar configuração de segurança",
+      "created_on": "2025-01-10",
+      "author": "Henrique Torres",
+      "type": "atendimento",
+      "status": "Reaberta",
+      "assigned_to": "Camila Almeida"
+    },
+    {
+      "id": 29,
+      "title": "Criar integração com novo sistema de CRM",
+      "created_on": "2025-01-07",
+      "author": "Camila Almeida",
+      "type": "desenvolvimento",
+      "status": "Em Execução",
+      "assigned_to": "Rafael Teixeira"
+    },
+    {
+      "id": 30,
+      "title": "Corrigir bug na autenticação de usuários externos",
+      "created_on": "2025-01-03",
+      "author": "Rafael Teixeira",
+      "type": "correcoes",
+      "status": "Análise Priorização",
+      "assigned_to": "João Silva"
     }
-  ],
-  "tarefas": []
+  ]
 }
