@@ -1,16 +1,12 @@
 .kanban-board {
     display: flex;
     overflow-x: auto;
-    transform: rotateX(180deg);
 }
 
 .kanban-column {
     overflow-y: auto;
-    max-height: calc(100vh - 50px);
-    /* Altura máxima da área de cartões */
-    min-height: calc(100vh - 50px);
-    /* Altura máxima da área de cartões */
-    transform: rotateX(180deg);
+    max-height: calc(80vh - 50px);
+    min-height: calc(80vh - 50px);
 }
 
 .kanban-column-title {

@@ -7,7 +7,7 @@
     <div class="kanban-board">
       <div
         *ngFor="let status of statuses"
-        class="col-lg-3 col-md-4 col-sm-6 col-12 border rounded p-2 mx-2 my-3 kanban-column"
+        class="col-xl-3 col-lg-4 col-md-4 col-sm-6 col-8 border rounded p-2 mx-2 my-3 kanban-column"
       >
         <ng-container *ngIf="filtrarTarefas(status) as tarefasFiltradas">
           <p class="kanban-column-title mt-2 mb-4">
