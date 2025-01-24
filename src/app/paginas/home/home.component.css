@@ -1,6 +1,11 @@
+.container-fluid {
+    min-height: 80vh;
+}
+
 .kanban-board {
     display: flex;
     overflow-x: auto;
+    flex-grow: 1;
 }
 
 .kanban-column {

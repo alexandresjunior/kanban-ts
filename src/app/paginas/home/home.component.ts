@@ -14,6 +14,7 @@ import { TarefasService } from '../../services/tarefas.service';
 })
 export class HomeComponent {
   tarefas: Tarefa[] = [];
+  carregando: boolean = false;
   tipoSelecionado: string = 'Todos';
   usuarioSelecionado: string = 'Todos';
 
@@ -30,8 +31,10 @@ export class HomeComponent {
   constructor(private service: TarefasService) { }
 
   ngOnInit(): void {
+    this.carregando = true; 
     this.service.listarTarefas().subscribe((tarefas) => {
       this.tarefas = tarefas;
+      this.carregando = false;
     });
   }
 

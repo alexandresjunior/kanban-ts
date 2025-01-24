@@ -5,12 +5,12 @@ import { HomeComponent } from './paginas/home/home.component';
 export const routes: Routes = [
     {
         path: '',
-        title: 'Kanban | Login',
+        title: 'Kanban Redmine | Login',
         component: LoginComponent
     },
     {
         path: 'home',
-        title: 'Kanban | Home',
+        title: 'Kanban Redmine | Home',
         component: HomeComponent
     }
 ];
