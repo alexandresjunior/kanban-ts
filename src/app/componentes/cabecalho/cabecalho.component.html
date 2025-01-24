@@ -1,127 +1,84 @@
-<div class="container-fluid container-cabecalho px-5">
-  <header
-    class="d-flex flex-wrap justify-content-center align-items-center py-3 mb-4"
-  >
-    <a
-      href="http://redmine.compesa.com.br/"
-      target="_blank"
-      class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none"
-    >
-      <img
-        src="assets/imagens/redmine_logo_white.png"
-        alt="Redmine"
-        width="200"
-      />
-    </a>
+<nav class="navbar navbar-expand-lg container-cabecalho px-5 py-3 mb-3">
+  <div class="container-fluid">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01"
+      aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+      <a href="http://redmine.compesa.com.br/" target="_blank"
+        class="d-flex align-items-center my-lg-2 my-md-3 my-3 me-md-auto link-body-emphasis text-decoration-none">
+        <img src="assets/imagens/redmine_logo_white.png" alt="Redmine" width="200" />
+      </a>
 
-    <div class="dropdown me-2">
-      <button
-        class="btn btn-light dropdown-toggle"
-        type="button"
-        id="dropdownMenuButton"
-        data-bs-toggle="dropdown"
-        aria-expanded="false"
-      >
-        Filtrar por usuário
-      </button>
-      <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-        <li>
-          <a class="dropdown-item" role="button">Todos</a>
-        </li>
-        <li *ngFor="let usuario of usuarios">
-          <a
-            class="dropdown-item"
-            role="button"
-            (click)="atualizarUsuarioSelecionado(usuario)"
-          >
-            {{ usuario }}
-          </a>
-        </li>
-      </ul>
-    </div>
-
-    <div class="dropdown me-2">
-      <button
-        class="btn btn-light dropdown-toggle"
-        type="button"
-        id="dropdownMenuButton"
-        data-bs-toggle="dropdown"
-        aria-expanded="false"
-      >
-        Filtrar por tipo de tarefa
-      </button>
-      <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-        <li>
-          <a
-            class="dropdown-item"
-            role="button"
-            (click)="atualizarTipoSelecionado('Todos')"
-            >Todos</a
-          >
-        </li>
-        <li>
-          <a
-            class="dropdown-item"
-            role="button"
-            (click)="atualizarTipoSelecionado('atendimento')"
-            >Atendimento</a
-          >
-        </li>
-        <li>
-          <a
-            class="dropdown-item"
-            role="button"
-            (click)="atualizarTipoSelecionado('correcoes')"
-            >Correções</a
-          >
-        </li>
-        <li>
-          <a
-            class="dropdown-item"
-            role="button"
-            (click)="atualizarTipoSelecionado('evolucoes')"
-            >Evoluções e Novos Projetos</a
-          >
-        </li>
-        <li>
-          <a
-            class="dropdown-item"
-            role="button"
-            (click)="atualizarTipoSelecionado('desenvolvimento')"
-            >Desenvolvimento</a
-          >
-        </li>
-      </ul>
-    </div>
-
-    <div class="dropdown me-2">
-      <button
-        class="btn btn-light dropdown-toggle"
-        type="button"
-        id="dropdownMenuButton"
-        data-bs-toggle="dropdown"
-        aria-expanded="false"
-      >
-        Filtrar por projeto
-      </button>
-      <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-        <li>
-          <a class="dropdown-item" role="button">GSAN</a>
-        </li>
-      </ul>
-    </div>
-
-    <ul class="nav nav-pills">
-      <li class="nav-item me-2">
-        <button type="button" class="btn btn-light">
-          <fa-icon [icon]="faPlus" class="fa-icon"></fa-icon>
+      <div class="dropdown me-2 mb-lg-0 mb-md-2 mb-2">
+        <button class="btn btn-light dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown"
+          aria-expanded="false">
+          Filtrar por usuário: {{ usuarioSelecionado }}
         </button>
-      </li>
-      <li class="nav-item">
-        <button type="button" class="btn btn-light" (click)="fazerLogout()">
-          <fa-icon [icon]="faSignOut" class="fa-icon"></fa-icon>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <li>
+            <a class="dropdown-item" role="button" (click)="atualizarUsuarioSelecionado('Todos')">
+              Todos
+            </a>
+          </li>
+          <li *ngFor="let usuario of usuarios">
+            <a class="dropdown-item" role="button" (click)="atualizarUsuarioSelecionado(usuario)">
+              {{ usuario }}
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="dropdown me-2 mb-lg-0 mb-md-2 mb-2 ">
+        <button class="btn btn-light dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown"
+          aria-expanded="false">
+          Filtrar por tipo de tarefa: {{ tipoTarefaSelecionado }}
         </button>
-      </li>
-    </ul>
-  </header>
-</div>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <li>
+            <a class="dropdown-item" role="button" (click)="atualizarTipoSelecionado('Todos')">Todos</a>
+          </li>
+          <li>
+            <a class="dropdown-item" role="button" (click)="atualizarTipoSelecionado('atendimento')">Atendimento</a>
+          </li>
+          <li>
+            <a class="dropdown-item" role="button" (click)="atualizarTipoSelecionado('correcoes')">Correções</a>
+          </li>
+          <li>
+            <a class="dropdown-item" role="button" (click)="atualizarTipoSelecionado('evolucoes')">Evoluções e Novos
+              Projetos</a>
+          </li>
+          <li>
+            <a class="dropdown-item" role="button"
+              (click)="atualizarTipoSelecionado('desenvolvimento')">Desenvolvimento</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="dropdown me-2 mb-lg-0 mb-md-2 mb-2 ">
+        <button class="btn btn-light dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown"
+          aria-expanded="false">
+          Filtrar por projeto: {{ projetoSelecionado }}
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <li>
+            <a class="dropdown-item" role="button">GSAN</a>
+          </li>
+        </ul>
+      </div>
+
+      <ul class="nav nav-pills">
+        <li class="nav-item me-2">
+          <button type="button" class="btn btn-light">
+            <fa-icon [icon]="faPlus" class="fa-icon"></fa-icon>
+          </button>
+        </li>
+        <li class="nav-item">
+          <button type="button" class="btn btn-light" (click)="fazerLogout()">
+            <fa-icon [icon]="faSignOut" class="fa-icon"></fa-icon>
+          </button>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

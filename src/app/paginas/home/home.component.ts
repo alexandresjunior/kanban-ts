@@ -13,7 +13,7 @@ import { TarefasService } from '../../services/tarefas.service';
   styleUrl: './home.component.css'
 })
 export class HomeComponent {
-  @Input() tarefas: Tarefa[] = [];
+  tarefas: Tarefa[] = [];
   tipoSelecionado: string = 'Todos';
   usuarioSelecionado: string = 'Todos';
 

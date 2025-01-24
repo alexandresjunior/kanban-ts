@@ -15,8 +15,11 @@ export class CabecalhoComponent {
   faPlus = faPlus;
   faSignOut = faSignOut;
   usuarios: string[] = [];
-  @Output() usuarioSelecionado = new EventEmitter<string>();
-  @Output() tipoSelecionado = new EventEmitter<string>();
+  usuarioSelecionado: string = "Todos";
+  tipoTarefaSelecionado: string = "Todos";
+  projetoSelecionado: string = "GSAN";
+  @Output() selecaoUsuario = new EventEmitter<string>();
+  @Output() selecaoTipoTarefa = new EventEmitter<string>();
 
   constructor(private router: Router, private tarefasService: TarefasService) { }
 
@@ -31,11 +34,13 @@ export class CabecalhoComponent {
   }
 
   atualizarUsuarioSelecionado(usuario: string): void {
-    this.usuarioSelecionado.emit(usuario);
+    this.usuarioSelecionado = usuario;
+    this.selecaoUsuario.emit(usuario);
   }
 
   atualizarTipoSelecionado(tipo: string): void {
-    this.tipoSelecionado.emit(tipo);
+    this.tipoTarefaSelecionado = tipo;
+    this.selecaoTipoTarefa.emit(tipo);
   }
 
   carregarUsuarios(): void {
