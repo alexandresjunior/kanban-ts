@@ -14,6 +14,7 @@ import { CommonModule } from '@angular/common';
 })
 export class HomeComponent {
   tarefas: Tarefa[] = [];
+  tipoSelecionado: string = 'Todos';
   statuses = [
     'Registrada',
     'Análise Viabilidade',
@@ -33,7 +34,14 @@ export class HomeComponent {
   }
 
   obterTarefasPorStatus(status: string): Tarefa[] {
-    return this.tarefas.filter((tarefa) => tarefa.status === status);
+    return this.tarefas.filter((tarefa) => (
+      tarefa.status === status &&
+      (this.tipoSelecionado === 'Todos' || this.tipoSelecionado === tarefa.type)
+    ));
+  }
+
+  atualizarTipoSelecionado(novoTipo: string): void {
+    this.tipoSelecionado = novoTipo;
   }
 
 }
