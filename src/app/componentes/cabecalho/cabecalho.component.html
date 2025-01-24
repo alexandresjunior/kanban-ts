@@ -38,19 +38,10 @@
           <li>
             <a class="dropdown-item" role="button" (click)="atualizarTipoSelecionado('Todos')">Todos</a>
           </li>
-          <li>
-            <a class="dropdown-item" role="button" (click)="atualizarTipoSelecionado('atendimento')">Atendimento</a>
-          </li>
-          <li>
-            <a class="dropdown-item" role="button" (click)="atualizarTipoSelecionado('correcoes')">Correções</a>
-          </li>
-          <li>
-            <a class="dropdown-item" role="button" (click)="atualizarTipoSelecionado('evolucoes')">Evoluções e Novos
-              Projetos</a>
-          </li>
-          <li>
-            <a class="dropdown-item" role="button"
-              (click)="atualizarTipoSelecionado('desenvolvimento')">Desenvolvimento</a>
+          <li *ngFor="let tipoTarefa of tiposTarefa">
+            <a class="dropdown-item" role="button" (click)="atualizarTipoSelecionado(tipoTarefa)">
+              {{ tipoTarefa }}
+            </a>
           </li>
         </ul>
       </div>

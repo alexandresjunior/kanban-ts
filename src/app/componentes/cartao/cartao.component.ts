@@ -13,4 +13,19 @@ export class CartaoComponent {
   @Input() autor: string = "";
   @Input() tipo: string = "";
   @Input() responsavel: string = "";
+
+  getTipoClasse(): string {
+    switch (this.tipo) {
+      case 'Atendimento':
+        return 'atendimento';
+      case 'Correções':
+        return 'correcoes';
+      case 'Evoluções e Novos Projetos':
+        return 'evolucoes';
+      case 'Desenvolvimento':
+        return 'desenvolvimento';
+      default:
+        return '';
+    }
+  }
 }

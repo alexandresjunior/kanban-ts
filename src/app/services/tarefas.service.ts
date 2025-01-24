@@ -8,7 +8,7 @@ import { map, Observable } from 'rxjs';
 })
 export class TarefasService {
 
-  private readonly API_URL = 'http://localhost:5001/tarefas';
+  private readonly API_URL = 'http://localhost:5000/tarefas';
 
   constructor(private http: HttpClient) { }
 
@@ -21,6 +21,15 @@ export class TarefasService {
       map((tarefas) => {
         const usuarios = tarefas.map((tarefa) => tarefa.assigned_to);
         return [...new Set(usuarios)];
+      })
+    );
+  }
+
+  listarTiposTarefa(): Observable<string[]> {
+    return this.listarTarefas().pipe(
+      map((tarefas) => {
+        const tiposTarefa = tarefas.map((tarefa) => tarefa.type);
+        return [...new Set(tiposTarefa)];
       })
     );
   }

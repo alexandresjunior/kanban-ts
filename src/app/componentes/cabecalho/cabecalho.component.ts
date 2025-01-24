@@ -15,15 +15,18 @@ export class CabecalhoComponent {
   faPlus = faPlus;
   faSignOut = faSignOut;
   usuarios: string[] = [];
+  tiposTarefa: string[] = [];
   usuarioSelecionado: string = "Todos";
   tipoTarefaSelecionado: string = "Todos";
   projetoSelecionado: string = "GSAN";
+
   @Output() selecaoUsuario = new EventEmitter<string>();
   @Output() selecaoTipoTarefa = new EventEmitter<string>();
 
   constructor(private router: Router, private tarefasService: TarefasService) { }
 
   ngOnInit(): void {
+    this.carregarTiposTarefa();
     this.carregarUsuarios();
   }
 
@@ -48,4 +51,11 @@ export class CabecalhoComponent {
       this.usuarios = usuarios;
     });
   }
+
+  carregarTiposTarefa(): void {
+    this.tarefasService.listarTiposTarefa().subscribe((tiposTarefa) => {
+      this.tiposTarefa = tiposTarefa;
+    });
+  }
+
 }

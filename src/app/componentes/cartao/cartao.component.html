@@ -1,4 +1,4 @@
-<div class="kanban-card {{ tipo }} text-start">
+<div class="kanban-card {{ getTipoClasse() }} text-start">
   <a href="http://redmine.compesa.com.br/issues/{{ id }}" target="_blank">
     <p class="mb-0">
       <small>RM-{{ id }}</small>
@@ -12,6 +12,9 @@
     </p>
     <p class="mb-0">
       <small><strong>Atribuído para: </strong>{{ responsavel }}</small>
+    </p>
+    <p class="mb-0">
+      <small><strong>Tipo: </strong>{{ tipo }}</small>
     </p>
   </a>
 </div>
