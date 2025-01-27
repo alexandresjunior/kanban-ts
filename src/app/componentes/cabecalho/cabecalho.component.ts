@@ -36,6 +36,11 @@ export class CabecalhoComponent {
     this.router.navigate(['']);
   }
 
+  redirecionarParaRedmine(): void {
+    const url = "http://redmine.compesa.com.br/projects/gsan?jump=welcome";
+    window.open(url, "_blank");
+  }
+
   atualizarUsuarioSelecionado(usuario: string): void {
     this.usuarioSelecionado = usuario;
     this.selecaoUsuario.emit(usuario);
