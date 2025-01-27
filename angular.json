@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "kanban-ts": {
+    "kanban-redmine-ts": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/kanban-ts",
+            "outputPath": "dist/kanban-redmine-ts",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -62,10 +62,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "kanban-ts:build:production"
+              "buildTarget": "kanban-redmine-ts:build:production"
             },
             "development": {
-              "buildTarget": "kanban-ts:build:development"
+              "buildTarget": "kanban-redmine-ts:build:development"
             }
           },
           "defaultConfiguration": "development"

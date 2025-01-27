@@ -14,16 +14,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have the 'kanban-ts' title`, () => {
+  it(`should have the 'kanban-redmine-ts' title`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('kanban-ts');
+    expect(app.title).toEqual('kanban-redmine-ts');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('h1')?.textContent).toContain('Hello, kanban-ts');
+    expect(compiled.querySelector('h1')?.textContent).toContain('Hello, kanban-redmine-ts');
   });
 });
