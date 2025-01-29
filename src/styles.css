@@ -16,3 +16,7 @@
     border-color: rgb(142, 142, 142) !important;
     color: rgb(255, 255, 255) !important;
 }
+
+.text-primary {
+    color:rgb(0, 15, 110) !important;
+}

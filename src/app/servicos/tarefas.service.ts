@@ -14,4 +14,8 @@ export class TarefasService {
   listarTarefas(): Observable<Tarefa[]> {
     return this.httpClient.get<Tarefa[]>(this.API_URL);
   }
+
+  cadastrarTarefa(tarefa: Tarefa): Observable<Tarefa> {
+    return this.httpClient.post<Tarefa>(this.API_URL, tarefa);
+  }
 }

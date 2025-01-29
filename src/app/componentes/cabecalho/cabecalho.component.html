@@ -6,6 +6,7 @@
 
         <div class="dropdown me-2">
             <button 
+                *ngIf="exibirFiltro" 
                 class="btn btn-light dropdown-toggle" 
                 type="button" 
                 data-bs-toggle="dropdown"
@@ -37,7 +38,7 @@
         </div>
 
         <ul class="nav nav-pills">
-            <li class="nav-item me-2">
+            <li *ngIf="exibirBotaoNovaTarefa" class="nav-item me-2">
                 <button type="button" class="btn btn-light">
                     <fa-icon [icon]="faPlus" class="fa-icon"></fa-icon>
                 </button>
