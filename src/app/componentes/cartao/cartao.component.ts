@@ -1,4 +1,5 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-cartao',
@@ -13,4 +14,18 @@ export class CartaoComponent {
   @Input() autor: string = "";
   @Input() tipo: string = "";
   @Input() responsavel: string = "";
+  @Output() acaoExclusao = new EventEmitter<boolean>();
+  @Output() selecaoTarefa = new EventEmitter<number>();
+
+  constructor(private router: Router) {}
+
+  executarAcaoExclusao(): void {
+    this.selecaoTarefa.emit(this.id);
+    this.acaoExclusao.emit(true);
+  }
+
+  editarTarefa(): void {
+    this.router.navigate(['editarTarefa', this.id]);
+  }
+
 }

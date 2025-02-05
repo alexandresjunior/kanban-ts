@@ -1,16 +1,16 @@
 {
   "tarefas": [
     {
-      "id": 1,
+      "id": "1",
       "title": "Corrigir erro na autenticação",
       "created_on": "2025-01-20",
-      "author": "João Silva",
-      "type": "bug",
+      "author": "Maria Oliveira",
+      "type": "feature",
       "status": "Em Execução",
-      "assigned_to": "Maria Oliveira"
+      "assigned_to": "Daniel Carvalho"
     },
     {
-      "id": 2,
+      "id": "2",
       "title": "Adicionar novo campo no formulário de cadastro",
       "created_on": "2025-01-21",
       "author": "Maria Oliveira",
@@ -19,16 +19,7 @@
       "assigned_to": "João Silva"
     },
     {
-      "id": 3,
-      "title": "Atualizar documentação da API",
-      "created_on": "2025-01-22",
-      "author": "Carlos Mendes",
-      "type": "documentation",
-      "status": "Registrada",
-      "assigned_to": "Ana Costa"
-    },
-    {
-      "id": 4,
+      "id": "4",
       "title": "Implementar autenticação via OAuth",
       "created_on": "2025-01-23",
       "author": "Ana Costa",
@@ -37,25 +28,7 @@
       "assigned_to": "Pedro Souza"
     },
     {
-      "id": 5,
-      "title": "Resolver problemas de performance no endpoint /tarefas",
-      "created_on": "2025-01-23",
-      "author": "Pedro Souza",
-      "type": "optimization",
-      "status": "Análise Viabilidade",
-      "assigned_to": "Clara Lima"
-    },
-    {
-      "id": 6,
-      "title": "Implementar dashboard de relatórios",
-      "created_on": "2025-01-15",
-      "author": "Clara Lima",
-      "type": "evolucoes",
-      "status": "Em Execução",
-      "assigned_to": "Lucas Alves"
-    },
-    {
-      "id": 7,
+      "id": "7",
       "title": "Corrigir erro no upload de arquivos",
       "created_on": "2025-01-12",
       "author": "Lucas Alves",
@@ -64,7 +37,7 @@
       "assigned_to": "Beatriz Rocha"
     },
     {
-      "id": 8,
+      "id": "8",
       "title": "Adicionar filtro avançado na pesquisa",
       "created_on": "2025-01-10",
       "author": "Beatriz Rocha",
@@ -73,7 +46,7 @@
       "assigned_to": "Ricardo Martins"
     },
     {
-      "id": 9,
+      "id": "9",
       "title": "Realizar migração de banco de dados",
       "created_on": "2025-01-18",
       "author": "Ricardo Martins",
@@ -82,43 +55,7 @@
       "assigned_to": "Amanda Ribeiro"
     },
     {
-      "id": 10,
-      "title": "Revisar textos no portal de atendimento",
-      "created_on": "2025-01-05",
-      "author": "Amanda Ribeiro",
-      "type": "atendimento",
-      "status": "Registrada",
-      "assigned_to": "Felipe Cardoso"
-    },
-    {
-      "id": 11,
-      "title": "Corrigir erro no cálculo de impostos",
-      "created_on": "2025-01-07",
-      "author": "Felipe Cardoso",
-      "type": "correcoes",
-      "status": "Análise Priorização",
-      "assigned_to": "Juliana Ferreira"
-    },
-    {
-      "id": 12,
-      "title": "Criar integração com API externa",
-      "created_on": "2025-01-09",
-      "author": "Juliana Ferreira",
-      "type": "desenvolvimento",
-      "status": "Em Execução",
-      "assigned_to": "Gustavo Santos"
-    },
-    {
-      "id": 13,
-      "title": "Melhorar layout da página inicial",
-      "created_on": "2025-01-04",
-      "author": "Gustavo Santos",
-      "type": "evolucoes",
-      "status": "Análise Viabilidade",
-      "assigned_to": "Paula Neves"
-    },
-    {
-      "id": 14,
+      "id": "14",
       "title": "Corrigir erro de validação no formulário",
       "created_on": "2025-01-03",
       "author": "Paula Neves",
@@ -127,7 +64,7 @@
       "assigned_to": "Fernando Lima"
     },
     {
-      "id": 15,
+      "id": "15",
       "title": "Implementar autenticação multifator",
       "created_on": "2025-01-02",
       "author": "Fernando Lima",
@@ -136,7 +73,7 @@
       "assigned_to": "Daniel Carvalho"
     },
     {
-      "id": 16,
+      "id": "16",
       "title": "Revisar logs de segurança",
       "created_on": "2025-01-08",
       "author": "Daniel Carvalho",
@@ -145,16 +82,7 @@
       "assigned_to": "Renata Souza"
     },
     {
-      "id": 17,
-      "title": "Otimizar consulta de relatórios",
-      "created_on": "2025-01-11",
-      "author": "Renata Souza",
-      "type": "evolucoes",
-      "status": "Análise Priorização",
-      "assigned_to": "Thiago Pereira"
-    },
-    {
-      "id": 18,
+      "id": "18",
       "title": "Corrigir timeout na API de pagamentos",
       "created_on": "2025-01-14",
       "author": "Thiago Pereira",
@@ -163,7 +91,7 @@
       "assigned_to": "Mariana Oliveira"
     },
     {
-      "id": 19,
+      "id": "19",
       "title": "Adicionar notificação de e-mails",
       "created_on": "2025-01-06",
       "author": "Mariana Oliveira",
@@ -172,7 +100,7 @@
       "assigned_to": "André Costa"
     },
     {
-      "id": 20,
+      "id": "20",
       "title": "Corrigir inconsistência no histórico de pedidos",
       "created_on": "2025-01-13",
       "author": "André Costa",
@@ -181,34 +109,7 @@
       "assigned_to": "Vanessa Lima"
     },
     {
-      "id": 21,
-      "title": "Melhorar performance do módulo de vendas",
-      "created_on": "2025-01-16",
-      "author": "Vanessa Lima",
-      "type": "evolucoes",
-      "status": "Em Execução",
-      "assigned_to": "Diego Ramos"
-    },
-    {
-      "id": 22,
-      "title": "Criar exportação de relatórios em Excel",
-      "created_on": "2025-01-19",
-      "author": "Diego Ramos",
-      "type": "desenvolvimento",
-      "status": "Registrada",
-      "assigned_to": "Laura Campos"
-    },
-    {
-      "id": 23,
-      "title": "Atualizar dependências do projeto",
-      "created_on": "2025-01-17",
-      "author": "Laura Campos",
-      "type": "atendimento",
-      "status": "Análise Viabilidade",
-      "assigned_to": "Gabriel Nogueira"
-    },
-    {
-      "id": 24,
+      "id": "24",
       "title": "Corrigir erro na geração de PDFs",
       "created_on": "2025-01-09",
       "author": "Gabriel Nogueira",
@@ -217,7 +118,7 @@
       "assigned_to": "Patrícia Dias"
     },
     {
-      "id": 25,
+      "id": "25",
       "title": "Adicionar suporte a múltiplos idiomas",
       "created_on": "2025-01-15",
       "author": "Patrícia Dias",
@@ -226,16 +127,7 @@
       "assigned_to": "Eduardo Silva"
     },
     {
-      "id": 26,
-      "title": "Melhorar acessibilidade no portal",
-      "created_on": "2025-01-14",
-      "author": "Eduardo Silva",
-      "type": "evolucoes",
-      "status": "Análise Priorização",
-      "assigned_to": "Sofia Batista"
-    },
-    {
-      "id": 27,
+      "id": "27",
       "title": "Implementar dashboard de monitoramento",
       "created_on": "2025-01-11",
       "author": "Sofia Batista",
@@ -244,7 +136,7 @@
       "assigned_to": "Henrique Torres"
     },
     {
-      "id": 28,
+      "id": "28",
       "title": "Revisar configuração de segurança",
       "created_on": "2025-01-10",
       "author": "Henrique Torres",
@@ -253,7 +145,7 @@
       "assigned_to": "Camila Almeida"
     },
     {
-      "id": 29,
+      "id": "29",
       "title": "Criar integração com novo sistema de CRM",
       "created_on": "2025-01-07",
       "author": "Camila Almeida",
@@ -262,25 +154,16 @@
       "assigned_to": "Rafael Teixeira"
     },
     {
-      "id": 30,
+      "id": "30",
       "title": "Corrigir bug na autenticação de usuários externos",
       "created_on": "2025-01-03",
       "author": "Rafael Teixeira",
-      "type": "correcoes",
+      "type": "bug",
       "status": "Análise Priorização",
       "assigned_to": "João Silva"
     },
     {
-      "id": 0,
-      "title": "Estudar Java",
-      "created_on": "2025-01-28",
-      "author": "usuario.name",
-      "type": "tipoTarefa.name",
-      "status": "status.name",
-      "assigned_to": "usuario.name"
-    },
-    {
-      "id": 0,
+      "id": "0",
       "title": "Reunião de Kickoff 23",
       "created_on": "2025-01-28",
       "author": "",
@@ -289,7 +172,7 @@
       "assigned_to": ""
     },
     {
-      "id": 0,
+      "id": "0",
       "title": "Reunião de Kickoff 123343656",
       "created_on": "2025-01-28",
       "author": "",
@@ -298,7 +181,7 @@
       "assigned_to": "usuario.name"
     },
     {
-      "id": 0,
+      "id": "0",
       "title": "Análise de Requisitos",
       "created_on": "2025-01-28",
       "author": "Maria Oliveira",
@@ -307,228 +190,561 @@
       "assigned_to": "usuario.name"
     },
     {
-      "id": 0,
+      "id": "0",
       "title": "Nova Tarefa",
       "created_on": "2025-01-30",
       "author": "João Silva",
       "type": "feature",
       "status": "Reaberta",
       "assigned_to": "Fernando Lima"
+    },
+    {
+      "id": "0",
+      "title": "",
+      "created_on": "",
+      "author": "Maria Oliveira",
+      "type": "desenvolvimento",
+      "status": "Registrada",
+      "assigned_to": "Fernando Lima"
+    },
+    {
+      "id": "0",
+      "title": "Estudar React JS",
+      "created_on": "2025-01-30",
+      "author": "Maria Oliveira",
+      "type": "bug",
+      "status": "Registrada",
+      "assigned_to": "Felipe Cardoso"
+    },
+    {
+      "id": "0",
+      "title": "",
+      "created_on": "",
+      "author": "",
+      "type": "",
+      "status": "",
+      "assigned_to": ""
+    },
+    {
+      "id": "0",
+      "title": "",
+      "created_on": "",
+      "author": "",
+      "type": "",
+      "status": "",
+      "assigned_to": ""
+    },
+    {
+      "id": "0",
+      "title": "",
+      "created_on": "",
+      "author": "",
+      "type": "",
+      "status": "",
+      "assigned_to": ""
+    },
+    {
+      "id": "0",
+      "title": "",
+      "created_on": "",
+      "author": "",
+      "type": "",
+      "status": "",
+      "assigned_to": ""
+    },
+    {
+      "id": "0",
+      "title": "",
+      "created_on": "",
+      "author": "",
+      "type": "",
+      "status": "",
+      "assigned_to": ""
+    },
+    {
+      "id": "0",
+      "title": "",
+      "created_on": "",
+      "author": "",
+      "type": "",
+      "status": "",
+      "assigned_to": ""
+    },
+    {
+      "id": "0",
+      "title": "",
+      "created_on": "",
+      "author": "",
+      "type": "",
+      "status": "",
+      "assigned_to": ""
+    },
+    {
+      "id": "0",
+      "title": "",
+      "created_on": "",
+      "author": "",
+      "type": "",
+      "status": "",
+      "assigned_to": ""
+    },
+    {
+      "id": "0",
+      "title": "",
+      "created_on": "",
+      "author": "",
+      "type": "",
+      "status": "",
+      "assigned_to": ""
+    },
+    {
+      "id": "0",
+      "title": "",
+      "created_on": "",
+      "author": "",
+      "type": "",
+      "status": "",
+      "assigned_to": ""
+    },
+    {
+      "id": "0",
+      "title": "",
+      "created_on": "",
+      "author": "",
+      "type": "",
+      "status": "",
+      "assigned_to": ""
+    },
+    {
+      "id": "0",
+      "title": "",
+      "created_on": "",
+      "author": "",
+      "type": "",
+      "status": "",
+      "assigned_to": ""
+    },
+    {
+      "id": "0",
+      "title": "",
+      "created_on": "",
+      "author": "",
+      "type": "",
+      "status": "",
+      "assigned_to": ""
+    },
+    {
+      "id": "0",
+      "title": "",
+      "created_on": "",
+      "author": "",
+      "type": "",
+      "status": "",
+      "assigned_to": ""
+    },
+    {
+      "id": "0",
+      "title": "",
+      "created_on": "",
+      "author": "",
+      "type": "",
+      "status": "",
+      "assigned_to": ""
+    },
+    {
+      "id": "0",
+      "title": "",
+      "created_on": "",
+      "author": "",
+      "type": "",
+      "status": "",
+      "assigned_to": ""
+    },
+    {
+      "id": "0",
+      "title": "",
+      "created_on": "",
+      "author": "",
+      "type": "",
+      "status": "",
+      "assigned_to": ""
+    },
+    {
+      "id": "0",
+      "title": "",
+      "created_on": "",
+      "author": "",
+      "type": "",
+      "status": "",
+      "assigned_to": ""
+    },
+    {
+      "id": "0",
+      "title": "",
+      "created_on": "",
+      "author": "",
+      "type": "",
+      "status": "",
+      "assigned_to": ""
+    },
+    {
+      "id": "0",
+      "title": "",
+      "created_on": "",
+      "author": "",
+      "type": "",
+      "status": "",
+      "assigned_to": ""
+    },
+    {
+      "id": "0",
+      "title": "",
+      "created_on": "",
+      "author": "",
+      "type": "",
+      "status": "",
+      "assigned_to": ""
+    },
+    {
+      "id": "0",
+      "title": "",
+      "created_on": "",
+      "author": "",
+      "type": "",
+      "status": "",
+      "assigned_to": ""
+    },
+    {
+      "id": "0",
+      "title": "",
+      "created_on": "",
+      "author": "",
+      "type": "",
+      "status": "",
+      "assigned_to": ""
+    },
+    {
+      "id": "0",
+      "title": "",
+      "created_on": "",
+      "author": "",
+      "type": "",
+      "status": "",
+      "assigned_to": ""
+    },
+    {
+      "id": "0",
+      "title": "",
+      "created_on": "",
+      "author": "",
+      "type": "",
+      "status": "",
+      "assigned_to": ""
+    },
+    {
+      "id": "0",
+      "title": "",
+      "created_on": "",
+      "author": "",
+      "type": "",
+      "status": "",
+      "assigned_to": ""
+    },
+    {
+      "id": "0",
+      "title": "",
+      "created_on": "",
+      "author": "",
+      "type": "",
+      "status": "",
+      "assigned_to": ""
+    },
+    {
+      "id": "0",
+      "title": "",
+      "created_on": "",
+      "author": "",
+      "type": "",
+      "status": "",
+      "assigned_to": ""
+    },
+    {
+      "id": "0",
+      "title": "",
+      "created_on": "",
+      "author": "",
+      "type": "",
+      "status": "",
+      "assigned_to": ""
+    },
+    {
+      "id": "0",
+      "title": "",
+      "created_on": "",
+      "author": "",
+      "type": "",
+      "status": "",
+      "assigned_to": ""
+    },
+    {
+      "id": "0",
+      "title": "",
+      "created_on": "",
+      "author": "",
+      "type": "",
+      "status": "",
+      "assigned_to": ""
+    },
+    {
+      "id": "0",
+      "title": "",
+      "created_on": "",
+      "author": "",
+      "type": "",
+      "status": "",
+      "assigned_to": ""
+    },
+    {
+      "id": "0",
+      "title": "",
+      "created_on": "",
+      "author": "",
+      "type": "",
+      "status": "",
+      "assigned_to": ""
+    },
+    {
+      "id": "0",
+      "title": "",
+      "created_on": "",
+      "author": "",
+      "type": "",
+      "status": "",
+      "assigned_to": ""
+    },
+    {
+      "id": "0",
+      "title": "",
+      "created_on": "",
+      "author": "",
+      "type": "",
+      "status": "",
+      "assigned_to": ""
     }
   ],
   "usuarios": [
     {
-      "id": 1,
+      "id": "1",
       "name": "João Silva",
       "email": "joao.silva@example.com"
     },
     {
-      "id": 2,
+      "id": "2",
       "name": "Maria Oliveira",
       "email": "maria.oliveira@example.com"
     },
     {
-      "id": 3,
+      "id": "3",
       "name": "Carlos Mendes",
       "email": "carlos.mendes@example.com"
     },
     {
-      "id": 4,
+      "id": "4",
       "name": "Ana Costa",
       "email": "ana.costa@example.com"
     },
     {
-      "id": 5,
+      "id": "5",
       "name": "Pedro Souza",
       "email": "pedro.souza@example.com"
     },
     {
-      "id": 6,
+      "id": "6",
       "name": "Clara Lima",
       "email": "clara.lima@example.com"
     },
     {
-      "id": 7,
+      "id": "7",
       "name": "Lucas Alves",
       "email": "lucas.alves@example.com"
     },
     {
-      "id": 8,
+      "id": "8",
       "name": "Beatriz Rocha",
       "email": "beatriz.rocha@example.com"
     },
     {
-      "id": 9,
+      "id": "9",
       "name": "Ricardo Martins",
       "email": "ricardo.martins@example.com"
     },
     {
-      "id": 10,
+      "id": "10",
       "name": "Amanda Ribeiro",
       "email": "amanda.ribeiro@example.com"
     },
     {
-      "id": 11,
+      "id": "11",
       "name": "Felipe Cardoso",
       "email": "felipe.cardoso@example.com"
     },
     {
-      "id": 12,
+      "id": "12",
       "name": "Juliana Ferreira",
       "email": "juliana.ferreira@example.com"
     },
     {
-      "id": 13,
+      "id": "13",
       "name": "Gustavo Santos",
       "email": "gustavo.santos@example.com"
     },
     {
-      "id": 14,
+      "id": "14",
       "name": "Paula Neves",
       "email": "paula.neves@example.com"
     },
     {
-      "id": 15,
+      "id": "15",
       "name": "Fernando Lima",
       "email": "fernando.lima@example.com"
     },
     {
-      "id": 16,
+      "id": "16",
       "name": "Daniel Carvalho",
       "email": "daniel.carvalho@example.com"
     },
     {
-      "id": 17,
+      "id": "17",
       "name": "Renata Souza",
       "email": "renata.souza@example.com"
     },
     {
-      "id": 18,
+      "id": "18",
       "name": "Thiago Pereira",
       "email": "thiago.pereira@example.com"
     },
     {
-      "id": 19,
+      "id": "19",
       "name": "Mariana Oliveira",
       "email": "mariana.oliveira@example.com"
     },
     {
-      "id": 20,
+      "id": "20",
       "name": "André Costa",
       "email": "andre.costa@example.com"
     },
     {
-      "id": 21,
+      "id": "21",
       "name": "Vanessa Lima",
       "email": "vanessa.lima@example.com"
     },
     {
-      "id": 22,
+      "id": "22",
       "name": "Diego Ramos",
       "email": "diego.ramos@example.com"
     },
     {
-      "id": 23,
+      "id": "23",
       "name": "Laura Campos",
       "email": "laura.campos@example.com"
     },
     {
-      "id": 24,
+      "id": "24",
       "name": "Gabriel Nogueira",
       "email": "gabriel.nogueira@example.com"
     },
     {
-      "id": 25,
+      "id": "25",
       "name": "Patrícia Dias",
       "email": "patrícia.dias@example.com"
     },
     {
-      "id": 26,
+      "id": "26",
       "name": "Eduardo Silva",
       "email": "eduardo.silva@example.com"
     },
     {
-      "id": 27,
+      "id": "27",
       "name": "Sofia Batista",
       "email": "sofia.batista@example.com"
     },
     {
-      "id": 28,
+      "id": "28",
       "name": "Henrique Torres",
       "email": "henrique.torres@example.com"
     },
     {
-      "id": 29,
+      "id": "29",
       "name": "Camila Almeida",
       "email": "camila.almeida@example.com"
     },
     {
-      "id": 30,
+      "id": "30",
       "name": "Rafael Teixeira",
       "email": "rafael.teixeira@example.com"
     }
   ],
   "tiposTarefa": [
     {
-      "id": 1,
+      "id": "1",
       "name": "bug"
     },
     {
-      "id": 4,
+      "id": "4",
       "name": "feature"
     },
     {
-      "id": 3,
+      "id": "3",
       "name": "documentation"
     },
     {
-      "id": 5,
+      "id": "5",
       "name": "optimization"
     },
     {
-      "id": 26,
+      "id": "26",
       "name": "evolucoes"
     },
     {
-      "id": 30,
+      "id": "30",
       "name": "correcoes"
     },
     {
-      "id": 29,
+      "id": "29",
       "name": "desenvolvimento"
     },
     {
-      "id": 28,
+      "id": "28",
       "name": "atendimento"
     }
   ],
   "statuses": [
     {
-      "id": 29,
+      "id": "29",
       "name": "Em Execução"
     },
     {
-      "id": 27,
+      "id": "27",
       "name": "Pronta para Homologação"
     },
     {
-      "id": 22,
+      "id": "22",
       "name": "Registrada"
     },
     {
-      "id": 25,
+      "id": "25",
       "name": "Aguardando Versão"
     },
     {
-      "id": 23,
+      "id": "23",
       "name": "Análise Viabilidade"
     },
     {
-      "id": 28,
+      "id": "28",
       "name": "Reaberta"
     },
     {
-      "id": 30,
+      "id": "30",
       "name": "Análise Priorização"
     }
   ]

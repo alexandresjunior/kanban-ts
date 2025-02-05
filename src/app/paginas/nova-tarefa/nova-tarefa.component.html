@@ -1,6 +1,7 @@
 <app-cabecalho [exibirFiltro]="false" [exibirBotaoNovaTarefa]="false"></app-cabecalho>
 <div class="container">
-    <h2 class="text-primary mb-3">Nova Tarefa</h2>
+    <h2 class="text-primary mb-3" *ngIf="!edicao">Nova Tarefa</h2>
+    <h2 class="text-primary mb-3" *ngIf="edicao">Editar Tarefa</h2>
     <div class="row justify-content-center mb-3">
         <div class="col-6 mb-3">
             <label for="titulo" class="form-label">Título</label>
@@ -49,4 +50,13 @@
         <button class="btn btn-primary" (click)="salvarTarefa()">Salvar</button>
     </div>
 </div>
+<app-modal 
+    *ngIf="exibirModal"
+    [titulo]="'Confirmação'"
+    [subtitulo]="'Tarefa cadastrada com sucesso!'"
+    [textoBotao1]="'Cadastrar Nova Tarefa'"
+    [acao1]="redirecionarParaNovaTarefa"
+    [textoBotao2]="'Ver Tarefas'"
+    [acao2]="redirecionarParaHome"
+></app-modal>
 <app-rodape></app-rodape>

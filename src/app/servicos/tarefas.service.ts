@@ -18,4 +18,16 @@ export class TarefasService {
   cadastrarTarefa(tarefa: Tarefa): Observable<Tarefa> {
     return this.httpClient.post<Tarefa>(this.API_URL, tarefa);
   }
+
+  excluirTarefa(id: number): Observable<any> {
+    return this.httpClient.delete(this.API_URL + `/${id}`);
+  }
+
+  buscarTarefa(id: number): Observable<Tarefa> {
+    return this.httpClient.get<Tarefa>(this.API_URL + `/${id}`);
+  }
+
+  atualizarTarefa(id: number, tarefa: Tarefa): Observable<Tarefa> {
+    return this.httpClient.put<Tarefa>(this.API_URL + `/${id}`, tarefa);
+  }
 }

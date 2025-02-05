@@ -13,11 +13,12 @@ import { faPlus, faSignOut } from '@fortawesome/free-solid-svg-icons';
 export class CabecalhoComponent {
   faPlus = faPlus;
   faSignOut = faSignOut;
-  router: Router = new Router;
   tipoSelecionado: string = 'Todos';
   @Input() exibirFiltro = true;
   @Input() exibirBotaoNovaTarefa = true;
   @Output() selecaoTipo = new EventEmitter<string>();
+
+  constructor(private router: Router) {}
 
   fazerLogout() : void {
     localStorage.removeItem('usuario_kanban');
@@ -28,5 +29,9 @@ export class CabecalhoComponent {
   atualizarTipoSelecionado(tipo: string): void {
     this.tipoSelecionado = tipo;
     this.selecaoTipo.emit(tipo);
+  }
+
+  redirecionarParaNovaTarefa(): void {
+    this.router.navigate(['novaTarefa']);
   }
 }
