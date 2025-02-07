@@ -9,7 +9,7 @@ import { ModalComponent } from "../../componentes/modal/modal.component";
 
 @Component({
   selector: 'app-home',
-  imports: [CartaoComponent, CabecalhoComponent, RodapeComponent, CommonModule, ModalComponent],
+  imports: [CartaoComponent, CabecalhoComponent, RodapeComponent, CommonModule],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })
@@ -48,30 +48,4 @@ export class HomeComponent {
     this.tipoSelecionado = novoTipo;
   }
 
-  selecionarTarefaASerExcluida(id: number): void {
-    this.idTarefaASerExcluida = id;
-  }
-
-  confirmarExclusao(): void {
-    this.exibirModal = true;
-  }
-
-  cancelarExclusao(): void {
-    this.exibirModal = false;
-  }
-
-  executarExclusao(): void {
-    if (!this.idTarefaASerExcluida) {
-      alert("Erro: ID da tarefa não definido!");
-      return;
-    }
-
-    this.tarefasService.excluirTarefa(this.idTarefaASerExcluida).subscribe((resposta) => {
-      alert("Tarefa excluída com sucesso!");
-      this.exibirModal = false;
-      window.location.reload();
-    }, (erro) => {
-      alert("Erro ao excluir tarefa: " + erro);
-    })
-  }
 }

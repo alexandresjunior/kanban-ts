@@ -9,7 +9,17 @@
         <p class="mb-0"><small><strong>Atribuído para: </strong>{{ responsavel }}</small></p>
         <div class="d-flex justify-content-center">
             <button class="btn btn-primary mt-3 me-2" (click)="editarTarefa()">Editar</button>
-            <button class="btn btn-danger mt-3" (click)="executarAcaoExclusao()">Excluir</button>
+            <button class="btn btn-danger mt-3" (click)="abrirModalExclusao()">Excluir</button>
         </div>
     </div>
 </div>
+
+<app-modal 
+    *ngIf="exibirModal"
+    [titulo]="'Confirmação de Exclusão'" 
+    [subtitulo]="'Tem certeza que deseja excluir esta tarefa?'"
+    [textoBotao1]="'Sim, prosseguir.'" 
+    [acao1]="executarExclusao.bind(this)" 
+    [textoBotao2]="'Não, cancelar.'"
+    [acao2]="fecharModalExclusao.bind(this)">
+</app-modal>
