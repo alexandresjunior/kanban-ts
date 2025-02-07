@@ -1,5 +1,5 @@
 <main class="form-signin w-100 m-auto">
-    <form class="container text-center">
+    <form [formGroup]="loginForm" class="container text-center" (ngSubmit)="fazerLogin()">
         <div class="row align-items-center justify-content-center">
             <div class="col-lg-4 col-md-6 col-10">
                 <img class="mb-4" src="assets/imagens/trello_logo.png" alt="" width="150px">
@@ -12,8 +12,17 @@
                         placeholder="name@example.com"
                         name="email"
                         [(ngModel)]="usuario.email"
+                        formControlName="email"
                     >
                     <label for="floatingInput">E-mail</label>
+                    <div class="text-danger my-2">
+                        <small *ngIf="loginForm.controls['email'].errors?.['required']">
+                            O campo e-mail é obrigatório.
+                        </small>
+                        <small *ngIf="loginForm.controls['email'].errors?.['email']">
+                            Formato do e-mail inválido.
+                        </small>
+                    </div>
                 </div>
                 <div class="form-floating">
                     <input 
@@ -23,8 +32,21 @@
                         placeholder="Password"
                         name="senha"
                         [(ngModel)]="usuario.senha"
+                        formControlName="senha"
                     >
                     <label for="floatingPassword">Senha</label>
+                    <div class="text-danger my-2">
+                        <small *ngIf="loginForm.controls['senha'].errors?.['required']">
+                            O campo senha é obrigatório.
+                        </small>
+                        <small *ngIf="loginForm.controls['senha'].errors?.['minLength']">
+                            A senha deve conter no mínimo 6 caracteres.
+                        </small>
+                        <small *ngIf="loginForm.controls['senha'].errors?.['pattern']">
+                            A senha deve conter ao menos uma letra maiúscula, uma letra minúscula,
+                            um número e um caracter especial.
+                        </small>
+                    </div>
                 </div>
 
                 <div class="form-check text-start my-3">
@@ -35,12 +57,13 @@
                         id="flexCheckDefault"
                         name="manterConectado"
                         [(ngModel)]="usuario.manterConectado"
+                        formControlName="manterConectado"
                     >
                     <label class="form-check-label" for="flexCheckDefault">
                         Mantenha-me conectado
                     </label>
                 </div>
-                <button class="btn btn-primary w-100 py-2" type="submit" (click)="fazerLogin()">Acessar</button>
+                <button class="btn btn-primary w-100 py-2" type="submit" [disabled]="loginForm.invalid">Acessar</button>
                 <div class="text-center mt-3">
                     <small class="text-danger">{{ erro }}</small>
                 </div>
