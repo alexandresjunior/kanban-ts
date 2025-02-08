@@ -1,5 +1,5 @@
 <app-cabecalho [exibirFiltro]="false" [exibirBotaoNovaTarefa]="false"></app-cabecalho>
-<div class="container">
+<form class="container" [formGroup]="novaTarefaForm" (ngSubmit)="salvarTarefa()">
     <h2 class="text-primary mb-3" *ngIf="!edicao">Nova Tarefa</h2>
     <h2 class="text-primary mb-3" *ngIf="edicao">Editar Tarefa</h2>
     <div class="row justify-content-center mb-3">
@@ -9,29 +9,55 @@
                 type="text" 
                 class="form-control" 
                 id="titulo" 
-                placeholder="name@example.com" 
-                [(ngModel)]="novaTarefa.title"
+                placeholder="name@example.com"
+                [(ngModel)]="novaTarefa.title" 
+                formControlName="titulo"
             />
+            <div class="text-danger my-2">
+                <small *ngIf="novaTarefaForm.controls['titulo'].errors?.['required']">
+                    O campo título é obrigatório.
+                </small>
+                <small *ngIf="novaTarefaForm.controls['titulo'].errors?.['minLength']">
+                    O título de uma tarefa deve ter no mínimo 5 caracteres.
+                </small>
+            </div>
         </div>
         <div class="col-6 mb-3">
             <label for="autor" class="form-label">Autor</label>
             <select 
                 class="form-select" 
-                aria-label="Default select example"
+                aria-label="Default select example" 
                 [(ngModel)]="novaTarefa.author"
+                formControlName="autor"
             >
                 <option *ngFor="let usuario of usuarios" [value]="usuario.name">{{ usuario.name }}</option>
             </select>
+            <div class="text-danger my-2">
+                <small *ngIf="novaTarefaForm.controls['autor'].errors?.['required']">
+                    O campo autor é obrigatório.
+                </small>
+            </div>
         </div>
         <div class="col-6 mb-3">
             <label for="dataCriacao" class="form-label">Data de Criação</label>
-            <input type="date" class="form-control" id="dataCriacao" [(ngModel)]="novaTarefa.created_on"/>
+            <input type="date" class="form-control" id="dataCriacao" [(ngModel)]="novaTarefa.created_on" />
         </div>
         <div class="col-6 mb-3">
             <label for="tipoTarefa" class="form-label">Selecione o tipo da tarefa</label>
-            <select class="form-select" aria-label="Default select example" [(ngModel)]="novaTarefa.type">
-                <option *ngFor="let tipoTarefa of tiposTarefa" [value]="tipoTarefa.name">{{ tipoTarefa.name }}</option>
+            <select 
+                class="form-select" 
+                aria-label="Default select example" 
+                [(ngModel)]="novaTarefa.type"
+                formControlName="tipoTarefa"
+            >
+                <option *ngFor="let tipoTarefa of tiposTarefa" [value]="tipoTarefa.name">{{ tipoTarefa.name }}
+                </option>
             </select>
+            <div class="text-danger my-2">
+                <small *ngIf="novaTarefaForm.controls['tipoTarefa'].errors?.['required']">
+                    O campo tipo da tarefa é obrigatório.
+                </small>
+            </div>
         </div>
         <div class="col-6 mb-3">
             <label for="statusTarefa" class="form-label">Status da tarefa</label>
@@ -47,16 +73,10 @@
         </div>
     </div>
     <div class="text-end">
-        <button class="btn btn-primary" (click)="salvarTarefa()">Salvar</button>
+        <button class="btn btn-primary" [disabled]="novaTarefaForm.invalid">Salvar</button>
     </div>
-</div>
-<app-modal 
-    *ngIf="exibirModal"
-    [titulo]="'Confirmação'"
-    [subtitulo]="'Tarefa cadastrada com sucesso!'"
-    [textoBotao1]="'Cadastrar Nova Tarefa'"
-    [acao1]="redirecionarParaNovaTarefa"
-    [textoBotao2]="'Ver Tarefas'"
-    [acao2]="redirecionarParaHome"
-></app-modal>
+</form>
+<app-modal *ngIf="exibirModal" [titulo]="'Confirmação'" [subtitulo]="'Tarefa cadastrada com sucesso!'"
+    [textoBotao1]="'Cadastrar Nova Tarefa'" [acao1]="redirecionarParaNovaTarefa" [textoBotao2]="'Ver Tarefas'"
+    [acao2]="redirecionarParaHome"></app-modal>
 <app-rodape></app-rodape>
