@@ -1,6 +1,4 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
-import { Router } from '@angular/router';
-import { TarefasService } from '../../servicos/tarefas.service';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-modal',
@@ -16,8 +14,7 @@ export class ModalComponent {
   @Input() acao1: any;
   @Input() acao2: any;
 
-  constructor(private router: Router, 
-    private tarefasService: TarefasService) {}
+  constructor() {}
 
   aoClicarBotao1(): void {
     if (this.acao1) {
@@ -30,12 +27,4 @@ export class ModalComponent {
       this.acao2();
     }
   }
-
-  executarExclusao(id: number): void {
-    this.tarefasService.excluirTarefa(id).subscribe((resposta) => {
-      alert("Tarefa excluída com sucesso!");
-      // window.location.reload();
-    })
-  }
-
 }
